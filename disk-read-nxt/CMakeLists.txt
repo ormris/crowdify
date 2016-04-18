@@ -1,0 +1,6 @@
+cmake_minimum_required (VERSION 2.6)
+project (disk-io)
+set(CMAKE_BUILD_TYPE Debug)
+include_directories(/usr/include/mysql/ /usr/include/mysql++/)
+add_executable(sql_insert insert.cpp)
+target_link_libraries(sql_insert mhash ssh2 mysqlpp)
